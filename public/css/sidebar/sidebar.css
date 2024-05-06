@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.modalout {
+    z-index: 1;
+    position: fixed;
+    display: none;
+    padding: 1rem;
+    margin-top: -20vh;
+    min-height: 120vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.out {
+    z-index: 2;
+    position: fixed;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+        /* Skala awal */
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        /* Skala akhir */
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+}
